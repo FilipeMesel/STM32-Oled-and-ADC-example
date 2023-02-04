@@ -6,9 +6,12 @@ This repository contains a simple use of two ADC channels reading by stm32f103c8
 ADC interrupt mode. This example was written using the layers software design
 
 ## How to rum this code
+First, you've to start a new project in stm32 CubeIde, setting a I2C1 port in "Fast Mode"and configuring ADC1 IN5, ADC2 IN6 with "ADC1 and ADC2 global interrupts" enabled. And you've to set the TIM1 and TIM2 to work with "PWM Mode and Output on channel 1".
+After wire up the hardware design following specs showed in Hardware design section; you just have to copy all files in the "Core" path and paste it in your project.
+I used this two references for make this project:
+- https://microcontrollerslab.com/stm32-blue-pill-adc-polling-interrupt-dma/
+- https://controllerstech.com/wp-content/uploads/2021/06/i2c_oled_1.jpeg
 
-After wire up the hardware design following specs showed in Hardware design section;
-you just have to copy all files in the "Core" path and paste it in your project.
 
 ## Hardware Design
 
@@ -47,8 +50,8 @@ The application layer contains a simple logic algorithn for read two ADC channel
 	* param 4: Oled Display "y"
 	* param 5: Font...This project has 3 fonts: FONT_7_X_10_PIXELS, FONT_11_X_18_PIXELS, FONT_16_X_26_PIXELS
 	*/
-	fm_api_oled_init(someText, sizeof(someText), 0, 0, FONT_11_X_18_PIXELS);
-    fm_api_oled_update_screen();
+	fm_api_oled_write(someText, sizeof(someText), 0, 0, FONT_11_X_18_PIXELS);
+    	fm_api_oled_update_screen();
 
 ## Oled API clear screen example:
 	fm_api_oled_clear();
