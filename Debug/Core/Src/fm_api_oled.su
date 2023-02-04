@@ -1,0 +1,4 @@
+../Core/Src/fm_api_oled.c:13:6:fm_api_oled_init	8	static
+../Core/Src/fm_api_oled.c:30:6:fm_api_oled_write	56	dynamic
+../Core/Src/fm_api_oled.c:60:6:fm_api_oled_clear	8	static
+../Core/Src/fm_api_oled.c:74:6:fm_api_oled_update_screen	8	static

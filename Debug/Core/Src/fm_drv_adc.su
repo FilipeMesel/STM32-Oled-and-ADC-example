@@ -1,0 +1,8 @@
+../Core/Src/fm_drv_adc.c:37:13:MX_ADC1_Init	24	static
+../Core/Src/fm_drv_adc.c:84:13:MX_ADC2_Init	24	static
+../Core/Src/fm_drv_adc.c:132:13:MX_TIM1_Init	80	static
+../Core/Src/fm_drv_adc.c:197:13:MX_TIM2_Init	48	static
+../Core/Src/fm_drv_adc.c:241:6:HAL_ADC_ConvCpltCallback	16	static
+../Core/Src/fm_drv_adc.c:252:13:MX_GPIO_Init	24	static
+../Core/Src/fm_drv_adc.c:271:15:fm_adc_open	8	static
+../Core/Src/fm_drv_adc.c:297:17:fm_adc_read	16	static

@@ -1,0 +1,2 @@
+../Core/Src/fm_api_adc.c:28:8:fm_api_adc_init	8	static
+../Core/Src/fm_api_adc.c:45:10:fm_api_adc_get_value	24	static
