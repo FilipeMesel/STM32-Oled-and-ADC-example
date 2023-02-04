@@ -8,17 +8,17 @@ ADC interrupt mode. This example was written using the layers software design
 ## Features
 As mentioned in the Description section, this software's written with layers software design. So:
 
-###Driver Layer:
+Driver Layer:
 The driver layer contains a adc_driver that's responssable for init adc channels, read adc channels and
 the ssd1306 i2c driver that controls the Oled access
 
-###API Layer:
+API Layer:
 The API layer contains the ADC read and init abstraction and Oled print, clear and write adstraction
 
-####Oled API init example:
+Oled API init example:
 	fm_api_oled_init();
 	
-####Oled API write example:
+Oled API write example:
 	char someText[10];
 	sprintf(someText, "Hi!!!");
 	/*
@@ -31,14 +31,14 @@ The API layer contains the ADC read and init abstraction and Oled print, clear a
 	fm_api_oled_init(someText, sizeof(someText), 0, 0, FONT_11_X_18_PIXELS);
     fm_api_oled_update_screen();
 
-####Oled API clear screen example:
+Oled API clear screen example:
 	fm_api_oled_clear();
 	
 
-####ADC API init example:
+ADC API init example:
 	fm_api_adc_init();
 	
-####ADC API get value example:
+ADC API get value example:
 	/*
 	* param 1: ADC channel that you want to use.
 	* this code supports ADC_CH1 and ADC_CH2
@@ -46,7 +46,7 @@ The API layer contains the ADC read and init abstraction and Oled print, clear a
 	fm_api_adc_get_value(ADC_CH1);
 	
 
-###APP Layer:
+APP Layer:
 The application layer contains a simple logic algorithn for read two ADC channels and print then into Oled display.
 
 ## Hardware Design
