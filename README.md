@@ -14,11 +14,17 @@ the ssd1306 i2c driver that controls the Oled access
 
 API Layer:
 The API layer contains the ADC read and init abstraction and Oled print, clear and write adstraction
+	
 
-Oled API init example:
+APP Layer:
+The application layer contains a simple logic algorithn for read two ADC channels and print then into Oled display.
+
+
+
+## Oled API init example:
 	fm_api_oled_init();
 	
-Oled API write example:
+## Oled API write example:
 	char someText[10];
 	sprintf(someText, "Hi!!!");
 	/*
@@ -31,23 +37,19 @@ Oled API write example:
 	fm_api_oled_init(someText, sizeof(someText), 0, 0, FONT_11_X_18_PIXELS);
     fm_api_oled_update_screen();
 
-Oled API clear screen example:
+## Oled API clear screen example:
 	fm_api_oled_clear();
 	
 
-ADC API init example:
+## ADC API init example:
 	fm_api_adc_init();
 	
-ADC API get value example:
+## ADC API get value example:
 	/*
 	* param 1: ADC channel that you want to use.
 	* this code supports ADC_CH1 and ADC_CH2
 	*/
 	fm_api_adc_get_value(ADC_CH1);
-	
-
-APP Layer:
-The application layer contains a simple logic algorithn for read two ADC channels and print then into Oled display.
 
 ## Hardware Design
 
@@ -55,6 +57,7 @@ The hardware degsign used in this code was wired with:
   - STM32F103C8T6 Blue Pill
   - Potentiometer connected into the PA_05 pin of mcu
   - MQ-13 Gas sensor connected into the PA_06 pin of mcu
+  - Oled display connected in PB_06 (I2C SCL) and PB_07 (I2C SDA)
 
 ## How to rum this code
 
