@@ -5,6 +5,19 @@
 This repository contains a simple use of two ADC channels reading by stm32f103c8t6 using
 ADC interrupt mode. This example was written using the layers software design
 
+## How to rum this code
+
+After wire up the hardware design following specs showed in Hardware design section;
+you just have to copy all files in the "Core" path and paste it in your project.
+
+## Hardware Design
+
+The hardware degsign used in this code was wired with:
+  - STM32F103C8T6 Blue Pill
+  - Potentiometer connected into the PA_05 pin of mcu
+  - MQ-13 Gas sensor connected into the PA_06 pin of mcu
+  - Oled display connected in PB_06 (I2C SCL) and PB_07 (I2C SDA)
+
 ## Features
 As mentioned in the Description section, this software's written with layers software design. So:
 
@@ -50,16 +63,3 @@ The application layer contains a simple logic algorithn for read two ADC channel
 	* this code supports ADC_CH1 and ADC_CH2
 	*/
 	fm_api_adc_get_value(ADC_CH1);
-
-## Hardware Design
-
-The hardware degsign used in this code was wired with:
-  - STM32F103C8T6 Blue Pill
-  - Potentiometer connected into the PA_05 pin of mcu
-  - MQ-13 Gas sensor connected into the PA_06 pin of mcu
-  - Oled display connected in PB_06 (I2C SCL) and PB_07 (I2C SDA)
-
-## How to rum this code
-
-After wire up the hardware design following specs showed in Hardware design section;
-you just have to copy all files in the "Core" path and paste it in your project.
