@@ -5,6 +5,11 @@
 This repository contains a simple use of two ADC channels reading by stm32f103c8t6 using
 ADC interrupt mode. This example was written using the layers software design
 
+
+https://user-images.githubusercontent.com/54197776/216793773-b399b645-b494-40d0-849e-ae3b540a9cc2.mp4
+
+
+
 ## How to rum this code
 First, you've to start a new project in stm32 CubeIde, setting a I2C1 port in "Fast Mode"and configuring ADC1 IN5, ADC2 IN6 with "ADC1 and ADC2 global interrupts" enabled. And you've to set the TIM1 and TIM2 to work with "PWM Mode and Output on channel 1".
 After wire up the hardware design following specs showed in Hardware design section; you just have to copy all files in the "Core" path and paste it in your project.
